@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "visage-morpher-aura"
+version = "0.1.0"
+description = "A personality-infused face morphing model"
+authors = ["TranPhiHung <"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "*"
+torchvision = "*"
+opencv-python = "*"
+numpy = "*"
+dlib = "*"
+PyYAML = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

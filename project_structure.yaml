@@ -1,0 +1,82 @@
+.github:
+  workflows:
+    main.yml: null
+    ci.yml: null 
+    test.yml: null   
+
+requirements.txt: |
+  torch
+  torchvision
+  numpy
+  opencv-python
+  dlib
+  PyYAML
+
+pyproject.toml: |
+  [tool.poetry]
+  name = "visage-morpher-aura"
+  version = "0.1.0"
+  description = "A personality-infused face morphing model"
+  authors = ["TranPhiHung <"]
+  
+  [tool.poetry.dependencies]
+  python = "^3.9"
+  torch = "*"
+  torchvision = "*"
+  opencv-python = "*"
+  numpy = "*"
+  dlib = "*"
+  PyYAML = "*"
+
+  [build-system]
+  requires = ["poetry-core"]
+  build-backend = "poetry.core.masonry.api"
+
+src:
+  __init__.py: null
+  visage_morpher_aura:
+    __init__.py: null
+    main.py: |
+      def main():
+          print("Welcome to VisageMorpherAura!")
+
+    models:
+      __init__.py: null
+      face_morpher.py: null
+      aura_generator.py: null
+      identity_transformer.py: null
+
+    utils:
+      __init__.py: null
+      io_utils.py: null
+      logger.py: null
+
+    data:
+      __init__.py: null
+      sample_faces/: {}
+      embeddings/: {}
+
+tests:
+  __init__.py: null
+  test_face_morpher.py: null
+  test_aura_generator.py: null
+
+assets:
+  logos/: {}
+  icons/: {}
+  sample_outputs/: {}
+
+docs:
+  index.md: |
+    # VisageMorpherAura Documentation
+
+    This documentation provides an overview of the architecture, modules, and usage.
+  architecture.md: |
+    # Architecture
+    The architecture consists of three main components: Face Morpher, Aura Generator, and Identity Transformer.
+  usage.md: |
+    # Usage
+    To run the project, execute the main script:
+    ```bash
+    python src/visage_morpher_aura/main.py
+    ```
